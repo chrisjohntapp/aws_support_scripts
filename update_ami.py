@@ -274,7 +274,7 @@ def wait_deregister(logger, image_name, **kwargs):
     """
     Repeatedly checks for the existence of AMI named image_name. If not found,
     returns success. If timeout is reached while an image with that name still
-    exists, raises a MyTimeOut exception.
+    exists, raises a MyTimeoutError exception.
     """
     timeout = int(kwargs.get('timeout', '1200'))
     runinterval = kwargs.get('runinterval', 8)
